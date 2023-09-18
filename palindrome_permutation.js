@@ -1,6 +1,3 @@
-
-
-
 function permPalindrome(phrase) {
     //TODO: could use const instead of var because the value doesn't change
     //-cleaner
