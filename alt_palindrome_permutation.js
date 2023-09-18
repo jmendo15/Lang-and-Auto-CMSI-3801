@@ -50,4 +50,7 @@ function buildCharFrequencyTable(phrase) {
 }
 
 console.log(permPalindrome("tacocat"));
-console.log(permPalindrome("cot a palindrome"));
+console.log(permPalindrome("tac ocat"));
+console.log(permPalindrome("tac o cat"));
+console.log(permPalindrome("taCocat"));
+console.log(permPalindrome("not a palindrome"));
