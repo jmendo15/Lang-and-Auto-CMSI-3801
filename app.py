@@ -18,7 +18,23 @@ group["tori"] = "TA"
 def index():
     return render_template('index.html', users=git_users)
 
-
-
 # for user in git_users:
 #     print(user)
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def append(data):
+        node = Node(data, None)
+        
+        n = self.head
+        while n.child !=None:
+            n = n.child
+        n.child = node
+
+class Node:
+    def __init__(self, data, child):
+        self.data = data
+        self.next = child
