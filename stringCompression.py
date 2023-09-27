@@ -9,8 +9,10 @@ def compress_string(input_string):
             compressed.append(input_string[i - 1] + str(count))
             count = 1
 
+    #adds the character and its count to the end of the compressed list
     compressed.append(input_string[-1] + str(count))
 
+    #combines entries in list into a single string
     compressed_str = ''.join(compressed)
 
     if len(compressed_str) < len(input_string):
@@ -19,10 +21,12 @@ def compress_string(input_string):
         return input_string
 
 
+# ---------Tests---------
+
 original_str = "aaabcccccaaa"
 compressed_str = compress_string(original_str)
 print(compressed_str)  # Output: "a3b1c5a3"
 
 original_str2 = "abcdef"
 compressed_str2 = compress_string(original_str2)
-print(compressed_str2)  # Output: "abcdef" (unchanged, as compressed is not smaller)
+print(compressed_str2)  # Output: "abcdef" (compressed is not smaller)
