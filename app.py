@@ -26,7 +26,7 @@ class LinkedList:
         self.head = None
         self.tail = None
 
-    def append(data):
+    def append(self, data):
         node = Node(data, None)
         
         n = self.head

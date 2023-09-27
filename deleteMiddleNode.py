@@ -42,6 +42,8 @@ def delete_middle(Node):
         temp = temp.next
     return Node
 
+
+
 l = LinkedList()
 l.append('a')
 l.append('b')
