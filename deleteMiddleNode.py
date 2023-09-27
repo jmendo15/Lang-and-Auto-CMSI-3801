@@ -1,0 +1,2 @@
+def deleteMiddleNode(LinkedList):
+    return
