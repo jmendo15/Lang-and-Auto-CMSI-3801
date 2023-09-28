@@ -18,16 +18,17 @@ class LinkedList:
                 temp = temp.next
             temp.next = Node 
     
-# -------hypothetical solution if problem was more practical-------
-#   def delete(self, data):
-#        temp = self.head
-#        while  temp.nexdt != None:
-#            if temp.data == data:
-#                 temp.next = temp.next.next
-#                 #delete node
-#            temp = temp.next
-# -> (a) -> (b) -> (c) -> (d) -> (e) -> |NULL|  
-#                   ^          
+#-------hypothetical solution if problem was more practical-------
+
+    # def delete(self, data):
+    #     temp = self.head
+    #     while  temp.next != None:
+    #         if temp.data == data:
+    #                 temp.next = temp.next.next
+    #                 #delete node
+    #         temp = temp.next
+#-> (a) -> (b) -> (c) -> (d) -> (e) -> |NULL|  
+#                  ^          
 
 # ----------actual solution----------
 # not actually deleting middle node, you're moving the data over one and deleting the last node when you get to it
