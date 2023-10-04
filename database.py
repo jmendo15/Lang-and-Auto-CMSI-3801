@@ -31,5 +31,27 @@ dictionary = {}
 
 game_data[0:][::6]
 game_data[1:][::6]
+game_data[2:][::6]
+
+for idx, key in enumerate(column_names):
+    dictionary[key] = game_data[idx:][::6]
+
+df = pandas.DataFrame(data = dictionary)
+print(df.head())
+print(df.tail())
 
 # load data from DataFrame into SQLite database
+
+connection = sqlite3.connect("gameboy.db")
+cursor = connection.cursor()
+
+    # SQL: CREATE TABLE
+    #       INSERT INTO
+
+cursor.execute("CREATE TABLE games (" + ",".join(column_names) + ")")
+for i in range(len(df)):
+    cursor.execute("INSERT INTO games VALUES (?,?,?,?,?,?)", df.iloc[i])
+
+connection.commit()
+connection.close()
+
