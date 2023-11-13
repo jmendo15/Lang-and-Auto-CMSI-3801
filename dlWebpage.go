@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"io"
-	"os"
 	"net/http"
+	"os"
 )
 
 func main() {
