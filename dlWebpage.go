@@ -13,11 +13,11 @@ func main() {
 
 	response, err := http.Get(url)
 	if err != nil {
-		fmt.Printf(err)
+		fmt.Println(err)
 	}
-	defer response.body.Close()
+	defer response.Body.Close()
 
-	bodyBytes, err := io.ReadAll(response.body)
+	bodyBytes, err := io.ReadAll(response.Body)
 	if err != nil {
 		fmt.Println(err)
 	}
