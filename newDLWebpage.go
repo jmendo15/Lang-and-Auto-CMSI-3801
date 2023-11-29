@@ -55,4 +55,5 @@ func downloadPage(url string, ch chan<- string, wg *sync.WaitGroup) {
 
 	bodyString := string(bodyBytes)
 	ch <- bodyString
+	
 }
