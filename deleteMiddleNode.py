@@ -1,53 +1,34 @@
 class Node:
-    def __init__(self, data, next):
-        self.data = None
+
+    def __init__(self, data):
+        self.data = data
         self.next = None
 
-#singly linked list
-class LinkedList:
-    def __init__(self):
-        self.head = None
+def delete_middle_node(node):
+    if node is None or node.next is None:
+        return False 
 
-    def append(self,data):
-        none = Node(data, None)
-        if self.head == None:
-            self.head = Node
-        else:
-            temp = self.head
-            while temp.next != None:
-                temp = temp.next
-            temp.next = Node 
-    
-#-------hypothetical solution if problem was more practical-------
+    next_node = node.next
+    node.data = next_node.data
+    node.next = next_node.next
+    return True
 
-    # def delete(self, data):
-    #     temp = self.head
-    #     while  temp.next != None:
-    #         if temp.data == data:
-    #                 temp.next = temp.next.next
-    #                 #delete node
-    #         temp = temp.next
-#-> (a) -> (b) -> (c) -> (d) -> (e) -> |NULL|  
-#                  ^          
+# Example usage:
+# Create a linked list: a -> b -> c -> d -> e -> f
 
-# ----------actual solution----------
-# not actually deleting middle node, you're moving the data over one and deleting the last node when you get to it
-# -> (a) -> (b) -> (d) -> (e) -> |NULL|  
+a = Node('a')
+b = Node('b')
+c = Node('c')
+d = Node('d')
+e = Node('e')
+f = Node('f')
 
-def delete_middle(Node):
-    temp = Node
-    while temp.next != None:
-        temp.data = temp.next.data
-        if temp.next.next == Node:
-            temp.next = Node
-        temp = temp.next
-    return Node
+a.next = b
+b.next = c
+c.next = d
+d.next = e
+e.next = f
 
+delete_middle_node(c)
 
-
-l = LinkedList()
-l.append('a')
-l.append('b')
-l.append('c')
-l.append('d')
-l.append('e')
+# Resulting linked list: a -> b -> d -> e -> f
