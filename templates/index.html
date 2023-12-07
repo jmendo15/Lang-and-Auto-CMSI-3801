@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=""UTF-8>
+    <title>App</title>
+</head>
+<body>
+    <h1>PLand Profs</h1>
+    <div class="content">
+        {% for user in users %}
+            <div class="user">
+                <h3>{{ user }}: {{ users[user]}}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
